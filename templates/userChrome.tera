@@ -269,11 +269,8 @@ whiskers:
   /* Context Menu hover effects */
   menupopup,
   panel {
-    background: linear-gradient(135deg, {{ base | mod(opacity=0.95) | css_rgba }}, {{ surface0 | mod(opacity=0.95) | css_rgba }}) !important;
     backdrop-filter: blur(20px) !important;
-    border: 1px solid {{ palette[accent] | mod(opacity=0.3) | css_rgba }} !important;
     border-radius: 12px !important;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px {{ palette[accent] | mod(opacity=0.2) | css_rgba }} !important;
     animation: menuAppear 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
 
