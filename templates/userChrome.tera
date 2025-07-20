@@ -362,4 +362,8 @@ whiskers:
     text-shadow: 0 0 8px {{ palette[accent] | mod(opacity=0.5) | css_rgba }} !important;
     transform: translateX(2px) !important;
   }
+
+  menulist > menupopup > menuitem {
+    color: #{{ text.hex }} !important;
+  }
 }
