@@ -42,6 +42,41 @@
 > [!NOTE]
 > If you're using the [🌻 Latte](themes/Latte/) theme, set your browser to light mode. For [🪴 Frappé](themes/Frappe/), [🌺 Macchiato](themes/Macchiato/), or [🌿 Mocha](themes/Mocha/), enable dark mode to apply the theme correctly.
 
+## ✨ Enhanced Features
+
+This theme pack includes **advanced interactive effects** that bring your browser to life:
+
+### 🎯 **Centered Layout**
+- **Centered bookmark toolbar** for better visual balance
+- **Centered URL bar text** for a clean, modern look
+
+### 🎭 **Smooth Hover Animations**
+- **Bookmarks**: Scale, float, and glow effects with backdrop blur
+- **URL Bar**: Dynamic scaling with gradient borders and enhanced focus states
+- **Tabs**: Lift animations with brightness enhancement and pulse effects for active tabs
+- **Toolbar Buttons**: Playful scale and rotation with radial gradients
+- **Sidebar**: Smooth gradient slides with blur effects
+- **Workspace Button**: Elegant glow and scale transformations
+
+### 🎪 **Context Menu Magic**
+- **Glass Morphism**: Beautiful backdrop blur with gradient backgrounds
+- **Shimmer Effects**: Animated light streaks across menu items
+- **Interactive Elements**: Icons rotate and scale on hover
+- **Smart Animations**: Smooth appearance with scale and slide effects
+- **Color-Adaptive**: Effects automatically match each theme's primary color
+
+### 🌈 **Intelligent Color System**
+- **Auto-Detection**: Automatically extracts and adapts to each theme's primary color
+- **Dynamic Effects**: All animations use theme-appropriate colors for perfect harmony
+- **56 Variants**: Every theme (Latte, Frappé, Macchiato, Mocha) across all 14 colors includes these effects
+
+### 🎮 **Performance Optimized**
+- **CSS3 Transitions**: Hardware-accelerated animations using `cubic-bezier` easing
+- **Lightweight**: No JavaScript overhead - pure CSS magic
+- **Smooth 60fps**: Optimized for fluid animations without performance impact
+
+> **🚀 Pro Tip**: These effects work seamlessly across all themes and automatically adapt to your chosen color scheme!
+
 ## 🙋 FAQ
 
 - **Q:** What if I already have a `userChrome.css` and/or `userContent.css` configuration?

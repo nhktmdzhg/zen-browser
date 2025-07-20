@@ -127,4 +127,200 @@
   #zen-appcontent-navbar-container {
     background-color: #181825 !important;
   }
+  /* Center bookmark toolbar */
+  #PersonalToolbar {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  #PlacesToolbarItems {
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+  }
+
+  /* Center text in URL bar */
+  #urlbar-input {
+    text-align: center !important;
+  }
+
+  #urlbar-input-container {
+    text-align: center !important;
+  }
+
+  /* Cool hover effects using theme colors */
+  /* Bookmark hover effects */
+  .bookmark-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border-radius: 6px !important;
+  }
+
+  .bookmark-item:hover {
+    transform: translateY(-2px) scale(1.05) !important;
+    box-shadow: 0 8px 25px rgba(249, 226, 175, 0.3) !important;
+    background: linear-gradient(135deg, rgba(249, 226, 175, 0.1), rgba(249, 226, 175, 0.05)) !important;
+    backdrop-filter: blur(10px) !important;
+  }
+
+  /* URL bar hover effects */
+  #urlbar-background {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border-radius: 12px !important;
+    border: 1px solid transparent !important;
+  }
+
+  #urlbar-background:hover {
+    transform: scale(1.02) !important;
+    box-shadow: 0 10px 30px rgba(249, 226, 175, 0.2) !important;
+    border: 1px solid rgba(249, 226, 175, 0.4) !important;
+    background: linear-gradient(135deg, var(--arrowpanel-background), var(--zen-colors-primary)) !important;
+  }
+
+  #urlbar-background:focus-within {
+    transform: scale(1.03) !important;
+    box-shadow: 0 15px 40px rgba(249, 226, 175, 0.4) !important;
+    border: 1px solid var(--zen-primary-color) !important;
+  }
+
+  /* Tab hover effects */
+  .tabbrowser-tab {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+
+  .tabbrowser-tab:hover {
+    transform: translateY(-1px) !important;
+    filter: brightness(1.2) !important;
+  }
+
+  .tabbrowser-tab:not([selected]):hover {
+    background: linear-gradient(135deg, rgba(249, 226, 175, 0.1), rgba(249, 226, 175, 0.05)) !important;
+    box-shadow: 0 5px 15px rgba(249, 226, 175, 0.1) !important;
+  }
+
+  /* Toolbar button hover effects */
+  .toolbarbutton-1 {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border-radius: 8px !important;
+  }
+
+  .toolbarbutton-1:hover {
+    transform: scale(1.1) rotate(5deg) !important;
+    background: radial-gradient(circle, rgba(249, 226, 175, 0.2), transparent) !important;
+    box-shadow: 0 0 20px rgba(249, 226, 175, 0.3) !important;
+  }
+
+  /* Sidebar hover effects */
+  .sidebar-placesTree treechildren::-moz-tree-row(hover) {
+    background: linear-gradient(90deg, rgba(249, 226, 175, 0.1), transparent) !important;
+    backdrop-filter: blur(5px) !important;
+  }
+
+  /* Workspace button glow effect */
+  #zen-workspaces-button {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border-radius: 10px !important;
+  }
+
+  #zen-workspaces-button:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 0 25px rgba(249, 226, 175, 0.5) !important;
+    background: linear-gradient(135deg, var(--arrowpanel-background), var(--zen-colors-primary)) !important;
+    border: 1px solid rgba(249, 226, 175, 0.3) !important;
+  }
+
+  /* Floating animation for bookmarks */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-3px); }
+  }
+
+  .bookmark-item:hover {
+    animation: float 2s ease-in-out infinite !important;
+  }
+
+  /* Pulse effect for active elements */
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(249, 226, 175, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(249, 226, 175, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(249, 226, 175, 0); }
+  }
+
+  .tabbrowser-tab[selected] {
+    animation: pulse 2s infinite !important;
+  }
+
+  /* Context Menu hover effects */
+  menupopup, panel {
+    background: linear-gradient(135deg, rgba(30, 30, 46, 0.95), rgba(49, 50, 68, 0.95)) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(249, 226, 175, 0.3) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(249, 226, 175, 0.2) !important;
+    animation: menuAppear 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+
+  @keyframes menuAppear {
+    0% { opacity: 0; transform: scale(0.8) translateY(-10px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
+  menuitem, .panel-arrowcontainer .panel-arrowcontent {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border-radius: 8px !important;
+    margin: 2px !important;
+    position: relative !important;
+  }
+
+  menuitem:hover, .subviewbutton:hover {
+    background: linear-gradient(90deg, rgba(249, 226, 175, 0.2), rgba(249, 226, 175, 0.1)) !important;
+    transform: translateX(5px) scale(1.02) !important;
+    box-shadow: 0 5px 15px rgba(249, 226, 175, 0.3) !important;
+    border-left: 3px solid var(--zen-primary-color) !important;
+  }
+
+  menuitem:hover::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important;
+    background: linear-gradient(90deg, transparent, rgba(249, 226, 175, 0.1), transparent) !important;
+    animation: shimmer 1.5s infinite !important;
+    border-radius: 8px !important;
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  menuseparator {
+    background: linear-gradient(90deg, transparent, rgba(249, 226, 175, 0.5), transparent) !important;
+    height: 2px !important;
+    margin: 5px 10px !important;
+    border: none !important;
+    animation: separatorGlow 2s ease-in-out infinite alternate !important;
+  }
+
+  @keyframes separatorGlow {
+    0% { opacity: 0.3; }
+    100% { opacity: 0.8; }
+  }
+
+  .menu-right { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; }
+  menuitem:hover .menu-right {
+    transform: translateX(3px) rotate(45deg) !important;
+    color: var(--zen-primary-color) !important;
+    filter: drop-shadow(0 0 5px rgba(249, 226, 175, 0.7)) !important;
+  }
+
+  .menu-iconic-left { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; }
+  menuitem:hover .menu-iconic-left {
+    transform: scale(1.2) rotate(10deg) !important;
+    filter: drop-shadow(0 0 8px rgba(249, 226, 175, 0.6)) !important;
+  }
+
+  menuitem:hover .menu-text, .subviewbutton:hover .subviewbutton-text {
+    color: var(--zen-primary-color) !important;
+    text-shadow: 0 0 8px rgba(249, 226, 175, 0.5) !important;
+    transform: translateX(2px) !important;
+  }
 }
