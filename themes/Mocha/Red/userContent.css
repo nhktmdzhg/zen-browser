@@ -155,4 +155,408 @@
       background-color: #313244 !important;
     }
   }
+
+  /* ========== MAGICAL EFFECTS FOR ALL ABOUT PAGES ========== */
+
+  /* Global animations and keyframes */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(243, 139, 168, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(243, 139, 168, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(243, 139, 168, 0);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes glow {
+    0%,
+    100% {
+      filter: drop-shadow(0 0 5px rgba(243, 139, 168, 0.3));
+    }
+    50% {
+      filter: drop-shadow(0 0 15px rgba(243, 139, 168, 0.8));
+    }
+  }
+
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* General hover effects for buttons and interactive elements */
+  @-moz-document url-prefix("about:") {
+    button,
+    .button,
+    [role="button"] {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      border-radius: 8px !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    button:hover,
+    .button:hover,
+    [role="button"]:hover {
+      transform: translateY(-2px) scale(1.05) !important;
+      box-shadow: 0 8px 25px rgba(243, 139, 168, 0.3) !important;
+      background: linear-gradient(135deg, rgba(243, 139, 168, 0.1), rgba(243, 139, 168, 0.05)) !important;
+      animation: glow 2s ease-in-out infinite !important;
+    }
+
+    button:hover::before,
+    .button:hover::before,
+    [role="button"]:hover::before {
+      content: "" !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: -100% !important;
+      width: 100% !important;
+      height: 100% !important;
+      background: linear-gradient(90deg, transparent, rgba(243, 139, 168, 0.2), transparent) !important;
+      animation: shimmer 1.5s infinite !important;
+    }
+
+    /* Links with magical effects */
+    a,
+    .link {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      position: relative !important;
+    }
+
+    a:hover,
+    .link:hover {
+      transform: translateX(3px) !important;
+      text-shadow: 0 0 8px rgba(243, 139, 168, 0.6) !important;
+      filter: drop-shadow(0 0 5px rgba(243, 139, 168, 0.4)) !important;
+    }
+
+    /* Input fields with focus effects */
+    input,
+    textarea,
+    select {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      border-radius: 8px !important;
+      border: none !important;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none !important;
+      border: none !important;
+      box-shadow: 0 0 0 2px rgba(243, 139, 168, 0.4) !important;
+    }
+
+    input:hover,
+    textarea:hover,
+    select:hover {
+      box-shadow: 0 0 0 1px rgba(243, 139, 168, 0.2) !important;
+    }
+  }
+
+  /* Enhanced effects for about:newtab and about:home */
+  @-moz-document url("about:newtab"), url("about:home") {
+    /* Top sites with hover effects */
+    .top-site-outer {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      border-radius: 12px !important;
+    }
+
+    .top-site-outer:hover {
+      transform: translateY(-5px) scale(1.08) !important;
+      box-shadow: 0 15px 35px rgba(243, 139, 168, 0.4) !important;
+      background: linear-gradient(135deg, rgba(243, 139, 168, 0.1), rgba(243, 139, 168, 0.05)) !important;
+      animation: float 3s ease-in-out infinite !important;
+    }
+
+    /* Cards with magical effects */
+    .card-outer {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      border-radius: 12px !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    .card-outer:hover {
+      transform: translateY(-8px) scale(1.05) !important;
+      box-shadow: 0 20px 40px rgba(243, 139, 168, 0.3) !important;
+      background: linear-gradient(135deg, rgba(243, 139, 168, 0.1), rgba(243, 139, 168, 0.05)) !important;
+      backdrop-filter: blur(10px) !important;
+    }
+
+    .card-outer:hover::before {
+      content: "" !important;
+      position: absolute !important;
+      top: -50% !important;
+      left: -50% !important;
+      width: 200% !important;
+      height: 200% !important;
+      background: radial-gradient(circle, rgba(243, 139, 168, 0.1), transparent 70%) !important;
+      animation: pulse 3s ease-in-out infinite !important;
+    }
+
+    /* Search box enhancements */
+    .search-wrapper {
+      animation: slideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    .search-handoff-button,
+    .search-input {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      border-radius: 25px !important;
+    }
+
+    .search-handoff-button:hover,
+    .search-input:focus {
+      transform: scale(1.03) !important;
+      box-shadow: 0 10px 30px rgba(243, 139, 168, 0.3) !important;
+      border: 2px solid rgba(243, 139, 168, 0.5) !important;
+      animation: glow 2s ease-in-out infinite !important;
+    }
+
+    /* Logo with floating effect */
+    .logo {
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      animation: float 4s ease-in-out infinite !important;
+    }
+
+    .logo:hover {
+      transform: scale(1.1) rotate(5deg) !important;
+      filter: drop-shadow(0 0 20px rgba(243, 139, 168, 0.8)) !important;
+    }
+  }
+
+  /* Enhanced effects for about:preferences */
+  @-moz-document url-prefix("about:preferences") {
+    /* Category items with hover effects */
+    .category {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      border-radius: 10px !important;
+      position: relative !important;
+    }
+
+    .category:hover {
+      transform: translateX(10px) scale(1.02) !important;
+      background: linear-gradient(90deg, rgba(243, 139, 168, 0.2), rgba(243, 139, 168, 0.1)) !important;
+      box-shadow: 0 5px 15px rgba(243, 139, 168, 0.3) !important;
+      border-left: 4px solid #f38ba8 !important;
+    }
+
+    .category[selected] {
+      animation: pulse 2s infinite !important;
+      box-shadow: 0 0 20px rgba(243, 139, 168, 0.5) !important;
+    }
+
+    /* Group boxes with magical borders */
+    groupbox {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      border-radius: 12px !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    groupbox:hover {
+      transform: scale(1.01) !important;
+      box-shadow: 0 8px 25px rgba(243, 139, 168, 0.2) !important;
+      border: 2px solid rgba(243, 139, 168, 0.3) !important;
+    }
+
+    groupbox:hover::before {
+      content: "" !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: -100% !important;
+      width: 100% !important;
+      height: 100% !important;
+      background: linear-gradient(90deg, transparent, rgba(243, 139, 168, 0.1), transparent) !important;
+      animation: shimmer 2s infinite !important;
+    }
+
+    /* Checkbox and radio button effects */
+    input[type="checkbox"],
+    input[type="radio"] {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    input[type="checkbox"]:hover,
+    input[type="radio"]:hover {
+      transform: scale(1.2) !important;
+      filter: drop-shadow(0 0 8px rgba(243, 139, 168, 0.6)) !important;
+    }
+
+    input[type="checkbox"]:checked,
+    input[type="radio"]:checked {
+      animation: pulse 1.5s infinite !important;
+    }
+  }
+
+  /* Enhanced effects for about:addons */
+  @-moz-document url-prefix("about:addons") {
+    /* Addon cards with hover effects */
+    .addon-card,
+    .card {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      border-radius: 12px !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    .addon-card:hover,
+    .card:hover {
+      transform: translateY(-5px) scale(1.02) !important;
+      box-shadow: 0 15px 35px rgba(243, 139, 168, 0.3) !important;
+      background: linear-gradient(135deg, rgba(243, 139, 168, 0.1), rgba(243, 139, 168, 0.05)) !important;
+      backdrop-filter: blur(10px) !important;
+    }
+
+    .addon-card:hover::after,
+    .card:hover::after {
+      content: "" !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      background: linear-gradient(45deg, transparent 30%, rgba(243, 139, 168, 0.1) 50%, transparent 70%) !important;
+      animation: shimmer 2s infinite !important;
+    }
+
+    /* Toggle switches with glow */
+    .toggle-button {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    .toggle-button:hover {
+      transform: scale(1.1) !important;
+      filter: drop-shadow(0 0 10px rgba(243, 139, 168, 0.6)) !important;
+    }
+
+    .toggle-button[pressed="true"] {
+      animation: glow 2s ease-in-out infinite !important;
+    }
+  }
+
+  /* Enhanced effects for about:protections */
+  @-moz-document url-prefix("about:protections") {
+    /* Protection cards with subtle effects */
+    .card {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      border-radius: 12px !important;
+      position: relative !important;
+    }
+
+    .card:hover {
+      transform: translateY(-3px) !important;
+      box-shadow: 0 8px 20px rgba(243, 139, 168, 0.2) !important;
+      border: 1px solid rgba(243, 139, 168, 0.3) !important;
+    }
+
+    /* Graph and chart hover effects */
+    .graph,
+    .chart,
+    .protections-card {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      border-radius: 8px !important;
+    }
+
+    .graph:hover,
+    .chart:hover,
+    .protections-card:hover {
+      transform: scale(1.02) !important;
+      box-shadow: 0 5px 15px rgba(243, 139, 168, 0.25) !important;
+    }
+
+    /* Stats numbers with simple hover effect */
+    .stat-number {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    .stat-number:hover {
+      transform: scale(1.1) !important;
+      color: #f38ba8 !important;
+      text-shadow: 0 0 5px rgba(243, 139, 168, 0.4) !important;
+    }
+
+    /* Buttons with gentle effects */
+    button:hover {
+      background: linear-gradient(135deg, rgba(243, 139, 168, 0.1), rgba(243, 139, 168, 0.05)) !important;
+      border: 1px solid rgba(243, 139, 168, 0.4) !important;
+    }
+  }
+
+  /* Universal scroll effects */
+  @-moz-document url-prefix("about:") {
+    * {
+      scroll-behavior: smooth !important;
+    }
+
+    /* Custom scrollbar with glow */
+    ::-webkit-scrollbar {
+      width: 8px !important;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: rgba(24, 24, 37, 0.5) !important;
+      border-radius: 10px !important;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #f38ba8, rgba(243, 139, 168, 0.8)) !important;
+      border-radius: 10px !important;
+      transition: all 0.3s ease !important;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(180deg, rgba(243, 139, 168, 0.9), rgba(243, 139, 168, 0.7)) !important;
+      box-shadow: 0 0 10px rgba(243, 139, 168, 0.5) !important;
+    }
+
+    /* Page load animation */
+    body,
+    html {
+      animation: slideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    /* Selection with custom color */
+    ::selection {
+      background: rgba(243, 139, 168, 0.3) !important;
+      color: #cdd6f4 !important;
+      text-shadow: 0 0 5px rgba(243, 139, 168, 0.5) !important;
+    }
+
+    /* Focus outlines with glow */
+    *:focus {
+      outline: 2px solid rgba(243, 139, 168, 0.6) !important;
+      outline-offset: 2px !important;
+      box-shadow: 0 0 15px rgba(243, 139, 168, 0.4) !important;
+    }
+  }
 }

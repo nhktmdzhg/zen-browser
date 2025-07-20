@@ -51,7 +51,7 @@ This theme pack includes **advanced interactive effects** that bring your browse
 - **Centered bookmark toolbar** for better visual balance
 - **Centered URL bar text** for a clean, modern look
 
-### 🎭 **Smooth Hover Animations**
+### 🎭 **Browser UI Animations (userChrome.css)**
 
 - **Bookmarks**: Scale, float, and glow effects with backdrop blur
 - **URL Bar**: Dynamic scaling with gradient borders and enhanced focus states
@@ -68,17 +68,60 @@ This theme pack includes **advanced interactive effects** that bring your browse
 - **Smart Animations**: Smooth appearance with scale and slide effects
 - **Color-Adaptive**: Effects automatically match each theme's primary color
 
+### 🌐 **About Pages Magic (userContent.css)**
+
+Magical effects that transform all internal browser pages with theme-adaptive animations:
+
+#### 🏠 **about:newtab & about:home**
+
+- **Top Sites**: Floating hover effects with scale and gradient backgrounds
+- **Cards**: 3D lift animations with backdrop blur and radial glow
+- **Search Box**: Dynamic scaling with pulsing glow on focus
+- **Logo**: Floating animation with rotate and scale on hover
+
+#### ⚙️ **about:preferences**
+
+- **Category Menu**: Slide-in animations with gradient backgrounds and border accents
+- **Group Boxes**: Shimmer borders with magical light streaks on hover
+- **Checkboxes & Radios**: Scale and glow effects with pulse animations when active
+- **Selected Items**: Continuous pulse animation with enhanced shadows
+
+#### 🧩 **about:addons**
+
+- **Extension Cards**: Smooth lift animations with backdrop blur
+- **Toggle Switches**: Scale and glow effects with theme-adaptive colors
+- **Hover States**: Gradient overlays with animated shimmer effects
+
+#### 🛡️ **about:protections**
+
+- **Protection Cards**: Subtle lift effects with themed border highlights
+- **Statistics**: Scale animations with color-changing text shadows
+- **Charts & Graphs**: Gentle scaling with soft glow effects
+- **Interactive Elements**: Smooth hover states with gradient backgrounds
+
+#### 🎨 **Universal Enhancements**
+
+- **Custom Scrollbars**: Gradient themes with glow effects on hover
+- **Page Load Animation**: Smooth slide-in entrance effects
+- **Text Selection**: Theme-colored highlights with subtle glow
+- **Focus Outlines**: Glowing borders that adapt to each theme's accent color
+- **Form Inputs**: Clean focus states with theme-adaptive outer glow
+- **Buttons**: Scale and shimmer effects with gradient backgrounds
+- **Links**: Slide animations with text shadow and filter effects
+
 ### 🌈 **Intelligent Color System**
 
 - **Auto-Detection**: Automatically extracts and adapts to each theme's primary color
 - **Dynamic Effects**: All animations use theme-appropriate colors for perfect harmony
 - **56 Variants**: Every theme (Latte, Frappé, Macchiato, Mocha) across all 14 colors includes these effects
+- **RGB Precision**: Accurate color conversion for smooth rgba animations
 
 ### 🎮 **Performance Optimized**
 
 - **CSS3 Transitions**: Hardware-accelerated animations using `cubic-bezier` easing
 - **Lightweight**: No JavaScript overhead - pure CSS magic
 - **Smooth 60fps**: Optimized for fluid animations without performance impact
+- **Smart Animations**: 5 keyframe animations (float, pulse, shimmer, glow, slideIn)
 
 > **🚀 Pro Tip**: These effects work seamlessly across all themes and automatically adapt to your chosen color scheme!
 
