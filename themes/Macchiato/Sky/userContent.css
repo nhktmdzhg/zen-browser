@@ -1,6 +1,7 @@
 /* Catppuccin Macchiato Sky userContent.css*/
 
 @media (prefers-color-scheme: dark) {
+
   /* Common variables affecting all pages */
   @-moz-document url-prefix("about:") {
     :root {
@@ -11,10 +12,12 @@
       background-color: #24273a !important;
       --in-content-page-background: #24273a !important;
     }
+
   }
 
   /* Variables and styles specific to about:newtab and about:home */
   @-moz-document url("about:newtab"), url("about:home") {
+
     :root {
       --newtab-background-color: #24273a !important;
       --newtab-background-color-secondary: #363a4f !important;
@@ -29,10 +32,7 @@
     }
 
     .search-wrapper .logo-and-wordmark .logo {
-      background:
-        url("zen-logo-macchiato.svg"),
-        url("https://raw.githubusercontent.com/IAmJafeth/zen-browser/main/themes/Macchiato/Sky/zen-logo-macchiato.svg")
-          no-repeat center !important;
+      background: url("zen-logo-macchiato.svg"), url("https://raw.githubusercontent.com/IAmJafeth/zen-browser/main/themes/Macchiato/Sky/zen-logo-macchiato.svg") no-repeat center !important;
       display: inline-block !important;
       height: 82px !important;
       width: 82px !important;
@@ -72,8 +72,7 @@
       --zen-primary-color: #91d7e3 !important;
     }
 
-    groupbox,
-    moz-card {
+    groupbox , moz-card{
       background: #24273a !important;
     }
 
@@ -151,6 +150,7 @@
       --in-content-primary-button-text-color: #cad3f5 !important;
     }
 
+
     .card {
       background-color: #363a4f !important;
     }
@@ -171,13 +171,13 @@
 
   @keyframes pulse {
     0% {
-      box-shadow: 0 0 0 0 rgba(145, 215, 227, 0.7);
+      box-shadow: 0 0 0 0 rgba(145, 215, 227, 0.70);
     }
     70% {
-      box-shadow: 0 0 0 10px rgba(145, 215, 227, 0);
+      box-shadow: 0 0 0 10px rgba(145, 215, 227, 0.00);
     }
     100% {
-      box-shadow: 0 0 0 0 rgba(145, 215, 227, 0);
+      box-shadow: 0 0 0 0 rgba(145, 215, 227, 0.00);
     }
   }
 
@@ -193,10 +193,10 @@
   @keyframes glow {
     0%,
     100% {
-      filter: drop-shadow(0 0 5px rgba(145, 215, 227, 0.3));
+      filter: drop-shadow(0 0 5px rgba(145, 215, 227, 0.30));
     }
     50% {
-      filter: drop-shadow(0 0 15px rgba(145, 215, 227, 0.8));
+      filter: drop-shadow(0 0 15px rgba(145, 215, 227, 0.80));
     }
   }
 
@@ -226,8 +226,8 @@
     .button:hover,
     [role="button"]:hover {
       transform: translateY(-2px) scale(1.05) !important;
-      box-shadow: 0 8px 25px rgba(145, 215, 227, 0.3) !important;
-      background: linear-gradient(135deg, rgba(145, 215, 227, 0.1), rgba(145, 215, 227, 0.05)) !important;
+      box-shadow: 0 8px 25px rgba(145, 215, 227, 0.30) !important;
+      background: linear-gradient(135deg, rgba(145, 215, 227, 0.10), rgba(145, 215, 227, 0.05)) !important;
       animation: glow 2s ease-in-out infinite !important;
     }
 
@@ -240,7 +240,7 @@
       left: -100% !important;
       width: 100% !important;
       height: 100% !important;
-      background: linear-gradient(90deg, transparent, rgba(145, 215, 227, 0.2), transparent) !important;
+      background: linear-gradient(90deg, transparent, rgba(145, 215, 227, 0.20), transparent) !important;
       animation: shimmer 1.5s infinite !important;
     }
 
@@ -254,8 +254,8 @@
     a:hover,
     .link:hover {
       transform: translateX(3px) !important;
-      text-shadow: 0 0 8px rgba(145, 215, 227, 0.6) !important;
-      filter: drop-shadow(0 0 5px rgba(145, 215, 227, 0.4)) !important;
+      text-shadow: 0 0 8px rgba(145, 215, 227, 0.60) !important;
+      filter: drop-shadow(0 0 5px rgba(145, 215, 227, 0.40)) !important;
     }
 
     /* Input fields with focus effects */
@@ -272,13 +272,13 @@
     select:focus {
       outline: none !important;
       border: none !important;
-      box-shadow: 0 0 0 2px rgba(145, 215, 227, 0.4) !important;
+      box-shadow: 0 0 0 2px rgba(145, 215, 227, 0.40) !important;
     }
 
     input:hover,
     textarea:hover,
     select:hover {
-      box-shadow: 0 0 0 1px rgba(145, 215, 227, 0.2) !important;
+      box-shadow: 0 0 0 1px rgba(145, 215, 227, 0.20) !important;
     }
   }
 
@@ -292,8 +292,8 @@
 
     .top-site-outer:hover {
       transform: translateY(-5px) scale(1.08) !important;
-      box-shadow: 0 15px 35px rgba(145, 215, 227, 0.4) !important;
-      background: linear-gradient(135deg, rgba(145, 215, 227, 0.1), rgba(145, 215, 227, 0.05)) !important;
+      box-shadow: 0 15px 35px rgba(145, 215, 227, 0.40) !important;
+      background: linear-gradient(135deg, rgba(145, 215, 227, 0.10), rgba(145, 215, 227, 0.05)) !important;
       animation: float 3s ease-in-out infinite !important;
     }
 
@@ -307,8 +307,8 @@
 
     .card-outer:hover {
       transform: translateY(-8px) scale(1.05) !important;
-      box-shadow: 0 20px 40px rgba(145, 215, 227, 0.3) !important;
-      background: linear-gradient(135deg, rgba(145, 215, 227, 0.1), rgba(145, 215, 227, 0.05)) !important;
+      box-shadow: 0 20px 40px rgba(145, 215, 227, 0.30) !important;
+      background: linear-gradient(135deg, rgba(145, 215, 227, 0.10), rgba(145, 215, 227, 0.05)) !important;
       backdrop-filter: blur(10px) !important;
     }
 
@@ -319,7 +319,7 @@
       left: -50% !important;
       width: 200% !important;
       height: 200% !important;
-      background: radial-gradient(circle, rgba(145, 215, 227, 0.1), transparent 70%) !important;
+      background: radial-gradient(circle, rgba(145, 215, 227, 0.10), transparent 70%) !important;
       animation: pulse 3s ease-in-out infinite !important;
     }
 
@@ -337,8 +337,8 @@
     .search-handoff-button:hover,
     .search-input:focus {
       transform: scale(1.03) !important;
-      box-shadow: 0 10px 30px rgba(145, 215, 227, 0.3) !important;
-      border: 2px solid rgba(145, 215, 227, 0.5) !important;
+      box-shadow: 0 10px 30px rgba(145, 215, 227, 0.30) !important;
+      border: 2px solid rgba(145, 215, 227, 0.50) !important;
       animation: glow 2s ease-in-out infinite !important;
     }
 
@@ -350,7 +350,7 @@
 
     .logo:hover {
       transform: scale(1.1) rotate(5deg) !important;
-      filter: drop-shadow(0 0 20px rgba(145, 215, 227, 0.8)) !important;
+      filter: drop-shadow(0 0 20px rgba(145, 215, 227, 0.80)) !important;
     }
   }
 
@@ -365,14 +365,14 @@
 
     .category:hover {
       transform: translateX(10px) scale(1.02) !important;
-      background: linear-gradient(90deg, rgba(145, 215, 227, 0.2), rgba(145, 215, 227, 0.1)) !important;
-      box-shadow: 0 5px 15px rgba(145, 215, 227, 0.3) !important;
+      background: linear-gradient(90deg, rgba(145, 215, 227, 0.20), rgba(145, 215, 227, 0.10)) !important;
+      box-shadow: 0 5px 15px rgba(145, 215, 227, 0.30) !important;
       border-left: 4px solid #91d7e3 !important;
     }
 
     .category[selected] {
       animation: pulse 2s infinite !important;
-      box-shadow: 0 0 20px rgba(145, 215, 227, 0.5) !important;
+      box-shadow: 0 0 20px rgba(145, 215, 227, 0.50) !important;
     }
 
     /* Group boxes with magical borders */
@@ -385,8 +385,8 @@
 
     groupbox:hover {
       transform: scale(1.01) !important;
-      box-shadow: 0 8px 25px rgba(145, 215, 227, 0.2) !important;
-      border: 2px solid rgba(145, 215, 227, 0.3) !important;
+      box-shadow: 0 8px 25px rgba(145, 215, 227, 0.20) !important;
+      border: 2px solid rgba(145, 215, 227, 0.30) !important;
     }
 
     groupbox:hover::before {
@@ -396,7 +396,7 @@
       left: -100% !important;
       width: 100% !important;
       height: 100% !important;
-      background: linear-gradient(90deg, transparent, rgba(145, 215, 227, 0.1), transparent) !important;
+      background: linear-gradient(90deg, transparent, rgba(145, 215, 227, 0.10), transparent) !important;
       animation: shimmer 2s infinite !important;
     }
 
@@ -409,7 +409,7 @@
     input[type="checkbox"]:hover,
     input[type="radio"]:hover {
       transform: scale(1.2) !important;
-      filter: drop-shadow(0 0 8px rgba(145, 215, 227, 0.6)) !important;
+      filter: drop-shadow(0 0 8px rgba(145, 215, 227, 0.60)) !important;
     }
 
     input[type="checkbox"]:checked,
@@ -432,8 +432,8 @@
     .addon-card:hover,
     .card:hover {
       transform: translateY(-5px) scale(1.02) !important;
-      box-shadow: 0 15px 35px rgba(145, 215, 227, 0.3) !important;
-      background: linear-gradient(135deg, rgba(145, 215, 227, 0.1), rgba(145, 215, 227, 0.05)) !important;
+      box-shadow: 0 15px 35px rgba(145, 215, 227, 0.30) !important;
+      background: linear-gradient(135deg, rgba(145, 215, 227, 0.10), rgba(145, 215, 227, 0.05)) !important;
       backdrop-filter: blur(10px) !important;
     }
 
@@ -445,7 +445,7 @@
       left: 0 !important;
       right: 0 !important;
       bottom: 0 !important;
-      background: linear-gradient(45deg, transparent 30%, rgba(145, 215, 227, 0.1) 50%, transparent 70%) !important;
+      background: linear-gradient(45deg, transparent 30%, rgba(145, 215, 227, 0.10) 50%, transparent 70%) !important;
       animation: shimmer 2s infinite !important;
     }
 
@@ -456,7 +456,7 @@
 
     .toggle-button:hover {
       transform: scale(1.1) !important;
-      filter: drop-shadow(0 0 10px rgba(145, 215, 227, 0.6)) !important;
+      filter: drop-shadow(0 0 10px rgba(145, 215, 227, 0.60)) !important;
     }
 
     .toggle-button[pressed="true"] {
@@ -475,8 +475,8 @@
 
     .card:hover {
       transform: translateY(-3px) !important;
-      box-shadow: 0 8px 20px rgba(145, 215, 227, 0.2) !important;
-      border: 1px solid rgba(145, 215, 227, 0.3) !important;
+      box-shadow: 0 8px 20px rgba(145, 215, 227, 0.20) !important;
+      border: 1px solid rgba(145, 215, 227, 0.30) !important;
     }
 
     /* Graph and chart hover effects */
@@ -502,13 +502,13 @@
     .stat-number:hover {
       transform: scale(1.1) !important;
       color: #91d7e3 !important;
-      text-shadow: 0 0 5px rgba(145, 215, 227, 0.4) !important;
+      text-shadow: 0 0 5px rgba(145, 215, 227, 0.40) !important;
     }
 
     /* Buttons with gentle effects */
     button:hover {
-      background: linear-gradient(135deg, rgba(145, 215, 227, 0.1), rgba(145, 215, 227, 0.05)) !important;
-      border: 1px solid rgba(145, 215, 227, 0.4) !important;
+      background: linear-gradient(135deg, rgba(145, 215, 227, 0.10), rgba(145, 215, 227, 0.05)) !important;
+      border: 1px solid rgba(145, 215, 227, 0.40) !important;
     }
   }
 
@@ -524,19 +524,19 @@
     }
 
     ::-webkit-scrollbar-track {
-      background: rgba(24, 24, 37, 0.5) !important;
+      background: rgba(30, 32, 48, 0.50) !important;
       border-radius: 10px !important;
     }
 
     ::-webkit-scrollbar-thumb {
-      background: linear-gradient(180deg, #91d7e3, rgba(145, 215, 227, 0.8)) !important;
+      background: linear-gradient(180deg, #91d7e3, rgba(145, 215, 227, 0.80)) !important;
       border-radius: 10px !important;
       transition: all 0.3s ease !important;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-      background: linear-gradient(180deg, rgba(145, 215, 227, 0.9), rgba(145, 215, 227, 0.7)) !important;
-      box-shadow: 0 0 10px rgba(145, 215, 227, 0.5) !important;
+      background: linear-gradient(180deg, rgba(145, 215, 227, 0.90), rgba(145, 215, 227, 0.70)) !important;
+      box-shadow: 0 0 10px rgba(145, 215, 227, 0.50) !important;
     }
 
     /* Page load animation */
@@ -547,16 +547,16 @@
 
     /* Selection with custom color */
     ::selection {
-      background: rgba(145, 215, 227, 0.3) !important;
-      color: #cdd6f4 !important;
-      text-shadow: 0 0 5px rgba(145, 215, 227, 0.5) !important;
+      background: rgba(145, 215, 227, 0.30) !important;
+      color: #cad3f5 !important;
+      text-shadow: 0 0 5px rgba(145, 215, 227, 0.50) !important;
     }
 
     /* Focus outlines with glow */
     *:focus {
-      outline: 2px solid rgba(145, 215, 227, 0.6) !important;
+      outline: 2px solid rgba(145, 215, 227, 0.60) !important;
       outline-offset: 2px !important;
-      box-shadow: 0 0 15px rgba(145, 215, 227, 0.4) !important;
+      box-shadow: 0 0 15px rgba(145, 215, 227, 0.40) !important;
     }
   }
 }
