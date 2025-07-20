@@ -425,16 +425,13 @@
     .card {
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
       border-radius: 12px !important;
-      position: relative !important;
       overflow: hidden !important;
     }
 
     .addon-card:hover,
     .card:hover {
-      transform: translateY(-5px) scale(1.02) !important;
       box-shadow: 0 15px 35px rgba(138, 173, 244, 0.30) !important;
       background: linear-gradient(135deg, rgba(138, 173, 244, 0.10), rgba(138, 173, 244, 0.05)) !important;
-      backdrop-filter: blur(10px) !important;
     }
 
     .addon-card:hover::after,
