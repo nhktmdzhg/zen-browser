@@ -47,10 +47,12 @@
 This theme pack includes **advanced interactive effects** that bring your browser to life:
 
 ### 🎯 **Centered Layout**
+
 - **Centered bookmark toolbar** for better visual balance
 - **Centered URL bar text** for a clean, modern look
 
 ### 🎭 **Smooth Hover Animations**
+
 - **Bookmarks**: Scale, float, and glow effects with backdrop blur
 - **URL Bar**: Dynamic scaling with gradient borders and enhanced focus states
 - **Tabs**: Lift animations with brightness enhancement and pulse effects for active tabs
@@ -59,6 +61,7 @@ This theme pack includes **advanced interactive effects** that bring your browse
 - **Workspace Button**: Elegant glow and scale transformations
 
 ### 🎪 **Context Menu Magic**
+
 - **Glass Morphism**: Beautiful backdrop blur with gradient backgrounds
 - **Shimmer Effects**: Animated light streaks across menu items
 - **Interactive Elements**: Icons rotate and scale on hover
@@ -66,11 +69,13 @@ This theme pack includes **advanced interactive effects** that bring your browse
 - **Color-Adaptive**: Effects automatically match each theme's primary color
 
 ### 🌈 **Intelligent Color System**
+
 - **Auto-Detection**: Automatically extracts and adapts to each theme's primary color
 - **Dynamic Effects**: All animations use theme-appropriate colors for perfect harmony
 - **56 Variants**: Every theme (Latte, Frappé, Macchiato, Mocha) across all 14 colors includes these effects
 
 ### 🎮 **Performance Optimized**
+
 - **CSS3 Transitions**: Hardware-accelerated animations using `cubic-bezier` easing
 - **Lightweight**: No JavaScript overhead - pure CSS magic
 - **Smooth 60fps**: Optimized for fluid animations without performance impact
@@ -80,11 +85,11 @@ This theme pack includes **advanced interactive effects** that bring your browse
 ## 🙋 FAQ
 
 - **Q:** What if I already have a `userChrome.css` and/or `userContent.css` configuration?
-  
+
   **A:** You can copy and paste the content of our `userChrome.css` and/or `userContent.css` files into your existing ones. This way, you can keep your current configurations while applying the new theme settings.
 
 - **Q:** Can I automatically switch flavors between light and dark mode?
-  
+
   **A:** Yes! You can concatenate the `userChrome.css` and `userContent.css` files for 🌻 Latte (light mode) along with one of the dark mode themes like 🪴 Frappé, 🌺 Macchiato, or 🌿 Mocha. The browser will automatically switch between these themes when toggling between light and dark mode.
 
 ## 💝 Thanks to
