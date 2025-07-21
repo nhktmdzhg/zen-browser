@@ -53,20 +53,24 @@ This theme pack includes **advanced interactive effects** that bring your browse
 
 ### 🎭 **Browser UI Animations (userChrome.css)**
 
-- **Bookmarks**: Scale, float, and glow effects with backdrop blur
+- **Bookmarks**: Scale, float, and glow effects with backdrop blur on hover
 - **URL Bar**: Dynamic scaling with gradient borders and enhanced focus states
-- **Tabs**: Lift animations with brightness enhancement and pulse effects for active tabs
-- **Toolbar Buttons**: Playful scale and rotation with radial gradients
-- **Sidebar**: Smooth gradient slides with blur effects
-- **Workspace Button**: Elegant glow and scale transformations
+- **Tabs**: Lift animations with brightness enhancement and continuous pulse effects for active tabs
+- **Toolbar Buttons**: Scale and rotation with radial gradients and glow shadows
+- **Sidebar**: Smooth gradient slides with blur effects on tree rows
+- **Workspace Button**: Elegant glow and scale transformations with gradient backgrounds
 
 ### 🎪 **Context Menu Magic**
 
 - **Glass Morphism**: Beautiful backdrop blur with gradient backgrounds
-- **Shimmer Effects**: Animated light streaks across menu items
-- **Interactive Elements**: Icons rotate and scale on hover
+- **Shimmer Effects**: Animated light streaks across menu items using pseudo-elements
+- **Interactive Elements**: 
+  - Icons rotate and scale on hover
+  - Menu arrows slide and rotate
+  - Text slides with theme-colored shadows
 - **Smart Animations**: Smooth appearance with scale and slide effects
-- **Color-Adaptive**: Effects automatically match each theme's primary color
+- **Menu Separators**: Continuous glow animation with gradient backgrounds
+- **Color-Adaptive**: All effects automatically match each theme's primary color
 
 ### 🌐 **About Pages Magic (userContent.css)**
 
@@ -74,23 +78,23 @@ Magical effects that transform all internal browser pages with theme-adaptive an
 
 #### 🏠 **about:newtab & about:home**
 
-- **Top Sites**: Floating hover effects with scale and gradient backgrounds
-- **Cards**: 3D lift animations with backdrop blur and radial glow
-- **Search Box**: Dynamic scaling with pulsing glow on focus
-- **Logo**: Floating animation with rotate and scale on hover
+- **Top Sites**: Floating hover effects with scale and lift plus gradient backgrounds
+- **Cards**: 3D lift animations with backdrop blur and radial glow using pseudo-elements
+- **Search Box**: Dynamic scaling with pulsing glow on focus and rounded borders
+- **Logo**: Continuous floating animation with hover scale and rotation
 
 #### ⚙️ **about:preferences**
 
 - **Category Menu**: Slide-in animations with gradient backgrounds and border accents
-- **Group Boxes**: Shimmer borders with magical light streaks on hover
-- **Checkboxes & Radios**: Scale and glow effects with pulse animations when active
-- **Selected Items**: Continuous pulse animation with enhanced shadows
+- **Group Boxes**: Shimmer borders with magical light streaks on hover using pseudo-elements
+- **Checkboxes & Radios**: Scale and glow effects with continuous pulse animations when active
+- **Selected Items**: Continuous pulse animation with enhanced shadows and glow
 
 #### 🧩 **about:addons**
 
-- **Extension Cards**: Smooth lift animations with backdrop blur
+- **Extension Cards**: Smooth lift animations with backdrop blur and gradient overlays
 - **Toggle Switches**: Scale and glow effects with theme-adaptive colors
-- **Hover States**: Gradient overlays with animated shimmer effects
+- **Hover States**: Gradient overlays with animated shimmer effects using diagonal gradients
 
 #### 🛡️ **about:protections**
 
@@ -118,7 +122,7 @@ Magical effects that transform all internal browser pages with theme-adaptive an
 
 ### 🎮 **Performance Optimized**
 
-- **CSS3 Transitions**: Hardware-accelerated animations using `cubic-bezier` easing
+- **CSS3 Transitions**: Hardware-accelerated animations with smooth easing
 - **Lightweight**: No JavaScript overhead - pure CSS magic
 - **Smooth 60fps**: Optimized for fluid animations without performance impact
 - **Smart Animations**: 5 keyframe animations (float, pulse, shimmer, glow, slideIn)
