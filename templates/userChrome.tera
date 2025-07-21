@@ -191,6 +191,7 @@ whiskers:
   /* Tab hover effects */
   .tabbrowser-tab {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border-radius: 8px !important;
   }
 
   .tabbrowser-tab:hover {
@@ -201,6 +202,7 @@ whiskers:
   .tabbrowser-tab:not([selected]):hover {
     background: linear-gradient(135deg, {{ palette[accent] | mod(opacity=0.1) | css_rgba }}, {{ blue | mod(opacity=0.05) | css_rgba }}) !important;
     box-shadow: 0 5px 15px {{ palette[accent] | mod(opacity=0.1) | css_rgba }} !important;
+    border-radius: 8px !important;
   }
 
   /* Toolbar button hover effects */
@@ -264,6 +266,8 @@ whiskers:
 
   .tabbrowser-tab[selected] {
     animation: pulse 2s infinite !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
   }
 
   /* Context Menu hover effects */

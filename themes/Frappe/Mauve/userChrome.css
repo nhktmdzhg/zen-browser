@@ -181,6 +181,7 @@
   /* Tab hover effects */
   .tabbrowser-tab {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border-radius: 8px !important;
   }
 
   .tabbrowser-tab:hover {
@@ -191,6 +192,7 @@
   .tabbrowser-tab:not([selected]):hover {
     background: linear-gradient(135deg, rgba(202, 158, 230, 0.10), rgba(140, 170, 238, 0.05)) !important;
     box-shadow: 0 5px 15px rgba(202, 158, 230, 0.10) !important;
+    border-radius: 8px !important;
   }
 
   /* Toolbar button hover effects */
@@ -254,6 +256,8 @@
 
   .tabbrowser-tab[selected] {
     animation: pulse 2s infinite !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
   }
 
   /* Context Menu hover effects */

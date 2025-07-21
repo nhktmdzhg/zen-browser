@@ -160,7 +160,6 @@ whiskers:
       --in-content-primary-button-text-color: #{{ text.hex }} !important;
     }
 
-
     .card {
       background-color: #{{ surface0.hex }} !important;
     }
