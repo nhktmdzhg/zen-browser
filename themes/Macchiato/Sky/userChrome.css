@@ -287,15 +287,48 @@
     position: relative !important;
   }
 
-  menuitem:hover,
-  .subviewbutton:hover {
+  menuitem:hover:not(:has(menupopup:hover)),
+  .subviewbutton:hover,
+  menu:hover:not(:has(menupopup:hover)),
+  menuitem[_moz-menuactive="true"]:not(:has(menupopup:hover)),
+  menu[_moz-menuactive="true"]:not(:has(menupopup:hover)) {
     background: linear-gradient(90deg, rgba(145, 215, 227, 0.20), rgba(138, 173, 244, 0.10)) !important;
     transform: translateX(5px) scale(1.02) !important;
     box-shadow: 0 5px 15px rgba(145, 215, 227, 0.30) !important;
     border-left: 3px solid var(--zen-primary-color) !important;
   }
 
-  menuitem:hover::before {
+  /* Separate rules for submenu items */
+  menupopup menuitem:hover,
+  menupopup menu:hover,
+  menupopup menuitem[_moz-menuactive="true"],
+  menupopup menu[_moz-menuactive="true"] {
+    background: linear-gradient(90deg, rgba(145, 215, 227, 0.20), rgba(138, 173, 244, 0.10)) !important;
+    transform: translateX(5px) scale(1.02) !important;
+    box-shadow: 0 5px 15px rgba(145, 215, 227, 0.30) !important;
+    border-left: 3px solid var(--zen-primary-color) !important;
+  }
+
+  menuitem:hover:not(:has(menupopup:hover))::before,
+  menu:hover:not(:has(menupopup:hover))::before,
+  menuitem[_moz-menuactive="true"]:not(:has(menupopup:hover))::before,
+  menu[_moz-menuactive="true"]:not(:has(menupopup:hover))::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: linear-gradient(90deg, transparent, rgba(145, 215, 227, 0.10), transparent) !important;
+    animation: shimmer 1.5s infinite !important;
+    border-radius: 8px !important;
+  }
+
+  /* Separate shimmer for submenu items */
+  menupopup menuitem:hover::before,
+  menupopup menu:hover::before,
+  menupopup menuitem[_moz-menuactive="true"]::before,
+  menupopup menu[_moz-menuactive="true"]::before {
     content: "" !important;
     position: absolute !important;
     top: 0 !important;
@@ -336,7 +369,10 @@
   .menu-right {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
-  menuitem:hover .menu-right {
+  menuitem:hover .menu-right,
+  menu:hover .menu-right,
+  menuitem[_moz-menuactive="true"] .menu-right,
+  menu[_moz-menuactive="true"] .menu-right {
     transform: translateX(3px) rotate(45deg) !important;
     color: var(--zen-primary-color) !important;
     filter: drop-shadow(0 0 5px rgba(145, 215, 227, 0.70)) !important;
@@ -345,12 +381,18 @@
   .menu-iconic-left {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
-  menuitem:hover .menu-iconic-left {
+  menuitem:hover .menu-iconic-left,
+  menu:hover .menu-iconic-left,
+  menuitem[_moz-menuactive="true"] .menu-iconic-left,
+  menu[_moz-menuactive="true"] .menu-iconic-left {
     transform: scale(1.2) rotate(10deg) !important;
     filter: drop-shadow(0 0 8px rgba(145, 215, 227, 0.60)) !important;
   }
 
   menuitem:hover .menu-text,
+  menu:hover .menu-text,
+  menuitem[_moz-menuactive="true"] .menu-text,
+  menu[_moz-menuactive="true"] .menu-text,
   .subviewbutton:hover .subviewbutton-text {
     color: var(--zen-primary-color) !important;
     text-shadow: 0 0 8px rgba(145, 215, 227, 0.50) !important;
