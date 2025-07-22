@@ -9,6 +9,7 @@ whiskers:
 {%- set palette = flavor.colors -%}
 
 /* Catppuccin {{flavor.identifier | capitalize}} {{accent | capitalize}} userChrome.css*/
+/* Test comment for GitHub Action validation */
 
 @media (prefers-color-scheme: {{ if(cond=flavor.dark, t="dark", f="light") }}) {
   
