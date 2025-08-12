@@ -372,6 +372,10 @@
     color: #c6d0f5 !important;
   }
 
+  #PopupAutoComplete > richlistbox > richlistitem {
+    color: #c6d0f5 !important;
+  }
+
   /* ================= KEYFRAME ANIMATIONS ================= */
   
   @keyframes float {
