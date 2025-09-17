@@ -194,24 +194,10 @@ whiskers:
     button:hover,
     .button:hover,
     [role="button"]:hover {
-      transform: translateY(-2px) scale(1.05) !important;
-      box-shadow: 0 8px 25px {{ palette[accent] | mod(opacity=0.3) | css_rgba }} !important;
-      background: linear-gradient(135deg, {{ palette[accent] | mod(opacity=0.1) | css_rgba }}, {{ palette[accent] | mod(opacity=0.05) | css_rgba }}) !important;
-      animation: glow 2s ease-in-out infinite !important;
+      box-shadow: 0 0 15px {{ palette[accent] | mod(opacity=0.4) | css_rgba }} !important;
+      border: 2px solid #{{ palette[accent].hex }} !important;
     }
 
-    button:hover::before,
-    .button:hover::before,
-    [role="button"]:hover::before {
-      content: "" !important;
-      position: absolute !important;
-      top: 0 !important;
-      left: -100% !important;
-      width: 100% !important;
-      height: 100% !important;
-      background: linear-gradient(90deg, transparent, {{ palette[accent] | mod(opacity=0.2) | css_rgba }}, transparent) !important;
-      animation: shimmer 1.5s infinite !important;
-    }
 
     /* Universal Elements - Links */
     a,
@@ -222,9 +208,9 @@ whiskers:
 
     a:hover,
     .link:hover {
-      transform: translateX(3px) !important;
-      text-shadow: 0 0 8px {{ palette[accent] | mod(opacity=0.6) | css_rgba }} !important;
-      filter: drop-shadow(0 0 5px {{ palette[accent] | mod(opacity=0.4) | css_rgba }}) !important;
+      color: #{{ palette[accent].hex }} !important;
+      text-decoration: underline !important;
+      text-decoration-color: #{{ palette[accent].hex }} !important;
     }
 
     /* Universal Elements - Form Inputs */
@@ -261,18 +247,11 @@ whiskers:
     ::selection {
       background: {{ palette[accent] | mod(opacity=0.3) | css_rgba }} !important;
       color: #{{ text.hex }} !important;
-      text-shadow: 0 0 5px {{ palette[accent] | mod(opacity=0.5) | css_rgba }} !important;
     }
 
     /* Universal Elements - Smooth Scroll */
     * {
       scroll-behavior: smooth !important;
-    }
-
-    /* Universal Elements - Page Load Animation */
-    body,
-    html {
-      animation: slideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
     }
 
     /* Universal Elements - Custom Scrollbar */
@@ -307,10 +286,8 @@ whiskers:
     }
 
     .top-site-outer:hover {
-      transform: translateY(-5px) scale(1.08) !important;
-      box-shadow: 0 15px 35px {{ palette[accent] | mod(opacity=0.4) | css_rgba }} !important;
-      background: linear-gradient(135deg, {{ palette[accent] | mod(opacity=0.1) | css_rgba }}, {{ palette[accent] | mod(opacity=0.05) | css_rgba }}) !important;
-      animation: float 3s ease-in-out infinite !important;
+      box-shadow: 0 5px 15px {{ palette[accent] | mod(opacity=0.3) | css_rgba }} !important;
+      border: 2px solid {{ palette[accent] | mod(opacity=0.5) | css_rgba }} !important;
     }
 
     /* Card Hover Effects */
@@ -322,27 +299,11 @@ whiskers:
     }
 
     .card-outer:hover {
-      transform: translateY(-8px) scale(1.05) !important;
-      box-shadow: 0 20px 40px {{ palette[accent] | mod(opacity=0.3) | css_rgba }} !important;
-      background: linear-gradient(135deg, {{ palette[accent] | mod(opacity=0.1) | css_rgba }}, {{ palette[accent] | mod(opacity=0.05) | css_rgba }}) !important;
-      backdrop-filter: blur(10px) !important;
+      box-shadow: 0 8px 20px {{ palette[accent] | mod(opacity=0.25) | css_rgba }} !important;
+      border: 2px solid {{ palette[accent] | mod(opacity=0.4) | css_rgba }} !important;
     }
 
-    .card-outer:hover::before {
-      content: "" !important;
-      position: absolute !important;
-      top: -50% !important;
-      left: -50% !important;
-      width: 200% !important;
-      height: 200% !important;
-      background: radial-gradient(circle, {{ palette[accent] | mod(opacity=0.1) | css_rgba }}, transparent 70%) !important;
-      animation: pulse 3s ease-in-out infinite !important;
-    }
 
-    /* Search Box Effects */
-    .search-wrapper {
-      animation: slideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    }
 
     .search-handoff-button,
     .search-input {
@@ -352,21 +313,17 @@ whiskers:
 
     .search-handoff-button:hover,
     .search-input:focus {
-      transform: scale(1.03) !important;
-      box-shadow: 0 10px 30px {{ palette[accent] | mod(opacity=0.3) | css_rgba }} !important;
-      border: 2px solid {{ palette[accent] | mod(opacity=0.5) | css_rgba }} !important;
-      animation: glow 2s ease-in-out infinite !important;
+      box-shadow: 0 5px 15px {{ palette[accent] | mod(opacity=0.3) | css_rgba }} !important;
+      border: 2px solid #{{ palette[accent].hex }} !important;
     }
 
     /* Logo Effects */
     .logo {
       transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
-      animation: float 4s ease-in-out infinite !important;
     }
 
     .logo:hover {
-      transform: scale(1.1) rotate(5deg) !important;
-      filter: drop-shadow(0 0 20px {{ palette[accent] | mod(opacity=0.8) | css_rgba }}) !important;
+      box-shadow: 0 0 10px {{ palette[accent] | mod(opacity=0.3) | css_rgba }} !important;
     }
   }
 
@@ -381,15 +338,13 @@ whiskers:
     }
 
     .category:hover {
-      transform: translateX(10px) scale(1.02) !important;
-      background: linear-gradient(90deg, {{ palette[accent] | mod(opacity=0.2) | css_rgba }}, {{ palette[accent] | mod(opacity=0.1) | css_rgba }}) !important;
-      box-shadow: 0 5px 15px {{ palette[accent] | mod(opacity=0.3) | css_rgba }} !important;
+      box-shadow: 0 3px 10px {{ palette[accent] | mod(opacity=0.2) | css_rgba }} !important;
       border-left: 4px solid #{{ palette[accent].hex }} !important;
     }
 
     .category[selected] {
-      animation: pulse 2s infinite !important;
-      box-shadow: 0 0 20px {{ palette[accent] | mod(opacity=0.5) | css_rgba }} !important;
+      box-shadow: 0 0 10px {{ palette[accent] | mod(opacity=0.3) | css_rgba }} !important;
+      border-left: 4px solid #{{ palette[accent].hex }} !important;
     }
 
     /* Group Box Hover Effects */
@@ -401,21 +356,10 @@ whiskers:
     }
 
     groupbox:hover {
-      transform: scale(1.01) !important;
-      box-shadow: 0 8px 25px {{ palette[accent] | mod(opacity=0.2) | css_rgba }} !important;
-      border: 2px solid {{ palette[accent] | mod(opacity=0.3) | css_rgba }} !important;
+      box-shadow: 0 5px 15px {{ palette[accent] | mod(opacity=0.2) | css_rgba }} !important;
+      border: 1px solid {{ palette[accent] | mod(opacity=0.3) | css_rgba }} !important;
     }
 
-    groupbox:hover::before {
-      content: "" !important;
-      position: absolute !important;
-      top: 0 !important;
-      left: -100% !important;
-      width: 100% !important;
-      height: 100% !important;
-      background: linear-gradient(90deg, transparent, {{ palette[accent] | mod(opacity=0.1) | css_rgba }}, transparent) !important;
-      animation: shimmer 2s infinite !important;
-    }
 
     /* Form Control Hover Effects */
     input[type="checkbox"],
@@ -425,13 +369,13 @@ whiskers:
 
     input[type="checkbox"]:hover,
     input[type="radio"]:hover {
-      transform: scale(1.2) !important;
-      filter: drop-shadow(0 0 8px {{ palette[accent] | mod(opacity=0.6) | css_rgba }}) !important;
+      box-shadow: 0 0 8px {{ palette[accent] | mod(opacity=0.4) | css_rgba }} !important;
+      border: 1px solid {{ palette[accent] | mod(opacity=0.5) | css_rgba }} !important;
     }
 
     input[type="checkbox"]:checked,
     input[type="radio"]:checked {
-      animation: pulse 1.5s infinite !important;
+      border: 2px solid #{{ palette[accent].hex }} !important;
     }
   }
 
@@ -448,21 +392,10 @@ whiskers:
 
     .addon-card:hover,
     .card:hover {
-      box-shadow: 0 15px 35px {{ palette[accent] | mod(opacity=0.3) | css_rgba }} !important;
-      background: linear-gradient(135deg, {{ palette[accent] | mod(opacity=0.1) | css_rgba }}, {{ palette[accent] | mod(opacity=0.05) | css_rgba }}) !important;
+      box-shadow: 0 5px 15px {{ palette[accent] | mod(opacity=0.2) | css_rgba }} !important;
+      border: 1px solid {{ palette[accent] | mod(opacity=0.3) | css_rgba }} !important;
     }
 
-    .addon-card:hover::after,
-    .card:hover::after {
-      content: "" !important;
-      position: absolute !important;
-      top: 0 !important;
-      left: 0 !important;
-      right: 0 !important;
-      bottom: 0 !important;
-      background: linear-gradient(45deg, transparent 30%, {{ palette[accent] | mod(opacity=0.1) | css_rgba }} 50%, transparent 70%) !important;
-      animation: shimmer 2s infinite !important;
-    }
 
     /* Toggle Button Effects */
     .toggle-button {
@@ -470,12 +403,12 @@ whiskers:
     }
 
     .toggle-button:hover {
-      transform: scale(1.1) !important;
-      filter: drop-shadow(0 0 10px {{ palette[accent] | mod(opacity=0.6) | css_rgba }}) !important;
+      box-shadow: 0 0 10px {{ palette[accent] | mod(opacity=0.3) | css_rgba }} !important;
+      border: 1px solid {{ palette[accent] | mod(opacity=0.4) | css_rgba }} !important;
     }
 
     .toggle-button[pressed="true"] {
-      animation: glow 2s ease-in-out infinite !important;
+      border: 2px solid #{{ palette[accent].hex }} !important;
     }
   }
 
@@ -490,8 +423,7 @@ whiskers:
     }
 
     .card:hover {
-      transform: translateY(-3px) !important;
-      box-shadow: 0 8px 20px {{ palette[accent] | mod(opacity=0.2) | css_rgba }} !important;
+      box-shadow: 0 5px 15px {{ palette[accent] | mod(opacity=0.2) | css_rgba }} !important;
       border: 1px solid {{ palette[accent] | mod(opacity=0.3) | css_rgba }} !important;
     }
 
@@ -506,8 +438,8 @@ whiskers:
     .graph:hover,
     .chart:hover,
     .protections-card:hover {
-      transform: scale(1.02) !important;
-      box-shadow: 0 5px 15px {{ palette[accent] | mod(opacity=0.25) | css_rgba }} !important;
+      box-shadow: 0 3px 10px {{ palette[accent] | mod(opacity=0.2) | css_rgba }} !important;
+      border: 1px solid {{ palette[accent] | mod(opacity=0.3) | css_rgba }} !important;
     }
 
     /* Stats Number Effects */
@@ -516,69 +448,16 @@ whiskers:
     }
 
     .stat-number:hover {
-      transform: scale(1.1) !important;
       color: #{{ palette[accent].hex }} !important;
-      text-shadow: 0 0 5px {{ palette[accent] | mod(opacity=0.4) | css_rgba }} !important;
     }
 
     /* Button Effects */
     button:hover {
-      background: linear-gradient(135deg, {{ palette[accent] | mod(opacity=0.1) | css_rgba }}, {{ palette[accent] | mod(opacity=0.05) | css_rgba }}) !important;
       border: 1px solid {{ palette[accent] | mod(opacity=0.4) | css_rgba }} !important;
     }
   }
 
   /* ================= KEYFRAME ANIMATIONS ================= */
   
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-3px);
-    }
-  }
 
-  @keyframes pulse {
-    0% {
-      box-shadow: 0 0 0 0 {{ palette[accent] | mod(opacity=0.7) | css_rgba }};
-    }
-    70% {
-      box-shadow: 0 0 0 10px {{ palette[accent] | mod(opacity=0) | css_rgba }};
-    }
-    100% {
-      box-shadow: 0 0 0 0 {{ palette[accent] | mod(opacity=0) | css_rgba }};
-    }
-  }
-
-  @keyframes shimmer {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  }
-
-  @keyframes glow {
-    0%,
-    100% {
-      filter: drop-shadow(0 0 5px {{ palette[accent] | mod(opacity=0.3) | css_rgba }});
-    }
-    50% {
-      filter: drop-shadow(0 0 15px {{ palette[accent] | mod(opacity=0.8) | css_rgba }});
-    }
-  }
-
-  @keyframes slideIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20px) scale(0.9);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-  }
 }
